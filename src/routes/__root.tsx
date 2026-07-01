@@ -11,6 +11,10 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import logoAsset from "@/assets/logo.png";
+import { SiteHeader } from "@/components/hotel/SiteHeader";
+import { SiteFooter } from "@/components/hotel/SiteFooter";
+import { WhatsAppBubble } from "@/components/hotel/WhatsAppBubble";
 
 function NotFoundComponent() {
   return (
@@ -77,19 +81,44 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Hollyken Hotel | Comfortable & Luxury Hotel Accommodation" },
+      { name: "description", content: "Experience comfort, hospitality and exceptional accommodation at Hollyken Hotel. Book your stay today and enjoy elegant rooms, delicious dining and outstanding customer service." },
+      { name: "author", content: "Hollyken Hotel" },
+      { name: "theme-color", content: "#1c4a3a" },
+      { property: "og:site_name", content: "Hollyken Hotel" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" },
+      { rel: "icon", type: "image/png", href: logoAsset },
+      { rel: "apple-touch-icon", href: logoAsset },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Hotel",
+          name: "Hollyken Hotel",
+          description: "Comfortable, elegant and welcoming hotel accommodation with warm hospitality, delicious dining and peaceful surroundings.",
+          telephone: "+237674844485",
+          priceRange: "$$",
+          amenityFeature: [
+            { "@type": "LocationFeatureSpecification", name: "Free Wi-Fi", value: true },
+            { "@type": "LocationFeatureSpecification", name: "Restaurant", value: true },
+            { "@type": "LocationFeatureSpecification", name: "Room Service", value: true },
+            { "@type": "LocationFeatureSpecification", name: "Parking", value: true },
+            { "@type": "LocationFeatureSpecification", name: "Air Conditioning", value: true },
+            { "@type": "LocationFeatureSpecification", name: "24/7 Reception", value: true },
+          ],
+        }),
       },
     ],
   }),
@@ -118,8 +147,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SiteHeader />
+      <main className="min-h-screen">
+        <Outlet />
+      </main>
+      <SiteFooter />
+      <WhatsAppBubble />
     </QueryClientProvider>
   );
 }
