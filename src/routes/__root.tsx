@@ -88,6 +88,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Hollyken Hotel" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Hollyken Hotel | Comfortable & Luxury Hotel Accommodation" },
+      { name: "twitter:title", content: "Hollyken Hotel | Comfortable & Luxury Hotel Accommodation" },
+      { property: "og:description", content: "Experience comfort, hospitality and exceptional accommodation at Hollyken Hotel. Book your stay today and enjoy elegant rooms, delicious dining and outstanding customer service." },
+      { name: "twitter:description", content: "Experience comfort, hospitality and exceptional accommodation at Hollyken Hotel. Book your stay today and enjoy elegant rooms, delicious dining and outstanding customer service." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/601956c7-92c8-4e33-b078-cd0f42445b70/id-preview-ec5264f2--c35cc4a0-2c80-43a2-a6df-9bb9ae88e0a3.lovable.app-1782883885373.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/601956c7-92c8-4e33-b078-cd0f42445b70/id-preview-ec5264f2--c35cc4a0-2c80-43a2-a6df-9bb9ae88e0a3.lovable.app-1782883885373.png" },
     ],
     links: [
       {
