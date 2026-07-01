@@ -32,8 +32,8 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-background py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 sm:px-10 lg:grid-cols-5">
+      <section className="bg-background py-16 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-5 lg:gap-10 lg:px-10">
           <div className="space-y-4 lg:col-span-2">
             <InfoCard icon={<Phone size={16} />} label="Phone" value={PHONE_DISPLAY} href={`tel:${PHONE_TEL}`} />
             <InfoCard icon={<Mail size={16} />} label="Email" value="reservations@hollykenhotel.com" href="mailto:reservations@hollykenhotel.com" />
@@ -50,11 +50,11 @@ function ContactPage() {
                 e.preventDefault();
                 setSent(true);
               }}
-              className="rounded-3xl border border-border bg-card p-8 shadow-soft"
+              className="rounded-3xl border border-border bg-card p-6 shadow-soft sm:p-8"
             >
               <div className="font-display text-2xl">Send us a message</div>
               <p className="mt-1 text-sm text-muted-foreground">We'll reply as soon as we can.</p>
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <div className="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-2">
                 <Field label="Full name" name="name" required />
                 <Field label="Email" name="email" type="email" required />
                 <Field label="Phone" name="phone" />
@@ -64,8 +64,8 @@ function ContactPage() {
                 <label className="block text-sm font-medium">Message</label>
                 <textarea required rows={4} name="message" className="mt-2 w-full rounded-2xl border border-input bg-background px-4 py-3 text-sm outline-none focus:border-[color:var(--gold)] focus:ring-2 focus:ring-[color:var(--gold)]/30" />
               </div>
-              <div className="mt-6 flex items-center justify-between gap-4">
-                <button type="submit" className="btn-gold">Send message</button>
+              <div className="mt-6 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <button type="submit" className="btn-gold w-full justify-center sm:w-auto">Send message</button>
                 {sent && <span className="text-sm text-[color:var(--emerald-soft)]">Thank you — we'll be in touch shortly.</span>}
               </div>
             </form>
@@ -73,8 +73,8 @@ function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/60 py-24">
-        <div className="mx-auto max-w-4xl px-6 sm:px-10">
+      <section className="bg-secondary/60 py-16 sm:py-24">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-10">
           <SectionHeading align="center" eyebrow="FAQ" title="Good questions, straight answers" />
           <div className="mt-12 divide-y divide-border rounded-3xl border border-border bg-card">
             {FAQS.map((f, i) => (
@@ -82,9 +82,9 @@ function ContactPage() {
                 key={i}
                 open={open === i}
                 onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open ? i : null)}
-                className="group px-6 py-5"
+                className="group px-4 py-5 sm:px-6"
               >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4">
+                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 sm:items-center">
                   <span className="font-display text-base sm:text-lg">{f.q}</span>
                   <span className="text-[color:var(--gold)] transition-transform group-open:rotate-45 text-2xl leading-none">+</span>
                 </summary>

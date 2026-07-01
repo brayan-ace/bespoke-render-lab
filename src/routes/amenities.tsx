@@ -29,12 +29,12 @@ function AmenitiesPage() {
         </div>
       </section>
 
-      <section className="bg-background py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10">
-          <Stagger className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="bg-background py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+          <Stagger className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {AMENITIES.map((a) => (
               <StaggerItem key={a.title}>
-                <div className="group flex h-full items-start gap-5 rounded-3xl border border-border bg-card p-7 transition hover:-translate-y-1 hover:border-[color:var(--gold)]/50 hover:shadow-soft">
+                <div className="group flex h-full items-start gap-4 rounded-3xl border border-border bg-card p-5 transition hover:-translate-y-1 hover:border-[color:var(--gold)]/50 hover:shadow-soft sm:gap-5 sm:p-7">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-gold text-[color:var(--charcoal)]">
                     <AmenityIcon name={a.icon as never} className="h-5 w-5" />
                   </div>
@@ -49,8 +49,8 @@ function AmenitiesPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/60 py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10">
+      <section className="bg-secondary/60 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <SectionHeading eyebrow="Why Hollyken" title="Why guests love staying with us" />
           <Stagger className="mt-14 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
             {WHY_CHOOSE.map((item, i) => (

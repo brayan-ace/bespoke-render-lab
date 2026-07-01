@@ -53,12 +53,12 @@ function DiningPage() {
         </div>
       </section>
 
-      <section className="bg-background py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10">
-          <Stagger className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="bg-background py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+          <Stagger className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {MEALS.map((m) => (
               <StaggerItem key={m.title}>
-                <div className="h-full rounded-3xl border border-border bg-card p-7">
+                <div className="h-full rounded-3xl border border-border bg-card p-6 sm:p-7">
                   <div className="font-display text-xl text-foreground">{m.title}</div>
                   <div className="mt-3 h-px w-10 bg-[color:var(--gold)]" />
                   <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{m.copy}</p>
@@ -69,10 +69,10 @@ function DiningPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/60 py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10">
+      <section className="bg-secondary/60 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <SectionHeading eyebrow="From the kitchen" title="A menu that changes with the season" subtitle="A quiet balance of local traditions and international classics — prepared with real care." />
-          <Stagger className="mt-14 grid gap-6 sm:grid-cols-3">
+          <Stagger className="mt-14 grid gap-4 grid-cols-1 sm:grid-cols-3">
             {[dish1, dish2, dish3].map((src, i) => (
               <StaggerItem key={i}>
                 <div className="overflow-hidden rounded-3xl shadow-soft">

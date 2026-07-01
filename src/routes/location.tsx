@@ -29,8 +29,8 @@ function LocationPage() {
         </div>
       </section>
 
-      <section className="bg-background py-24">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 sm:px-10 lg:grid-cols-3">
+      <section className="bg-background py-16 sm:py-24">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-3 lg:gap-10 lg:px-10">
           <div className="space-y-6 lg:col-span-1">
             <div className="rounded-3xl bg-card p-7 shadow-soft">
               <div className="flex items-center gap-3">
@@ -40,7 +40,7 @@ function LocationPage() {
               <p className="mt-4 text-sm text-muted-foreground">
                 We're just a short journey from the heart of the city — quiet enough for real rest, close enough to everything you need.
               </p>
-              <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="btn-gold mt-6">
+              <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="btn-gold mt-6 w-full justify-center sm:w-auto">
                 Get Directions <ArrowUpRight size={16} />
               </a>
             </div>
@@ -61,7 +61,7 @@ function LocationPage() {
               src={MAPS_EMBED}
               title="Hollyken Hotel on Google Maps"
               loading="lazy"
-              className="h-[500px] w-full"
+              className="h-[320px] w-full sm:h-[420px] lg:h-[500px]"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </Reveal>

@@ -24,9 +24,9 @@ function RoomsPage() {
   return (
     <>
       <PageHeader eyebrow="Stay With Us" title="Rooms & Suites" subtitle="Four ways to feel at home, from our welcoming Standard Room to the spacious Executive Suite." />
-      <section className="bg-background py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10">
-          <Stagger className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+      <section className="bg-background py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+          <Stagger className="grid gap-8 grid-cols-1 md:grid-cols-2">
             {ROOMS.map((r) => (
               <StaggerItem key={r.slug}>
                 <RoomCard room={r} />

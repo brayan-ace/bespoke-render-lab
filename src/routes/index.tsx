@@ -32,8 +32,8 @@ function HomePage() {
       <Hero />
 
       {/* Intro / About preview */}
-      <section className="bg-background py-24 sm:py-32">
-        <div className="mx-auto grid max-w-7xl gap-14 px-6 sm:px-10 lg:grid-cols-12 lg:gap-16">
+      <section className="bg-background py-16 sm:py-24 lg:py-32">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-10">
           <div className="lg:col-span-5">
             <SectionHeading
               eyebrow="Welcome"
@@ -41,9 +41,9 @@ function HomePage() {
               subtitle="At Hollyken Hotel we blend quiet comfort with genuine hospitality — a place designed for real rest, real conversation and real ease, whether you're travelling for work, family or a weekend of nothing at all."
             />
             <Reveal delay={0.2}>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link to="/rooms" className="btn-gold">Explore Rooms</Link>
-                <Link to="/amenities" className="inline-flex items-center gap-2 text-sm font-semibold text-foreground/80 hover:text-foreground">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+                <Link to="/rooms" className="btn-gold w-full justify-center sm:w-auto">Explore Rooms</Link>
+                <Link to="/amenities" className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-foreground/80 hover:text-foreground sm:justify-start">
                   See amenities <ArrowUpRight size={14} />
                 </Link>
               </div>
@@ -51,17 +51,17 @@ function HomePage() {
           </div>
 
           <Reveal className="lg:col-span-7">
-            <div className="grid grid-cols-6 gap-4">
-              <div className="col-span-4 overflow-hidden rounded-3xl shadow-luxe">
-                <img src={receptionImg} alt="Emerald marble reception at Hollyken Hotel" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover transition-transform duration-[1200ms] hover:scale-105" />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-6">
+              <div className="overflow-hidden rounded-3xl shadow-luxe sm:col-span-4">
+                <img src={receptionImg} alt="Emerald marble reception at Hollyken Hotel" loading="lazy" width={1280} height={896} className="h-64 w-full object-cover transition-transform duration-[1200ms] hover:scale-105 sm:h-72" />
               </div>
-              <div className="col-span-2 overflow-hidden rounded-3xl shadow-luxe">
-                <img src={outdoorImg} alt="Golden hour terrace at Hollyken Hotel" loading="lazy" width={1280} height={896} className="h-72 w-full object-cover transition-transform duration-[1200ms] hover:scale-105" />
+              <div className="overflow-hidden rounded-3xl shadow-luxe sm:col-span-2">
+                <img src={outdoorImg} alt="Golden hour terrace at Hollyken Hotel" loading="lazy" width={1280} height={896} className="h-64 w-full object-cover transition-transform duration-[1200ms] hover:scale-105 sm:h-72" />
               </div>
-              <div className="col-span-3 overflow-hidden rounded-3xl shadow-luxe">
+              <div className="overflow-hidden rounded-3xl shadow-luxe sm:col-span-3">
                 <img src={restaurantImg} alt="Warmly lit hotel restaurant" loading="lazy" width={1280} height={896} className="h-56 w-full object-cover transition-transform duration-[1200ms] hover:scale-105" />
               </div>
-              <div className="col-span-3 flex flex-col justify-center rounded-3xl bg-gradient-emerald p-6 text-white shadow-luxe">
+              <div className="flex flex-col justify-center rounded-3xl bg-gradient-emerald p-6 text-white shadow-luxe sm:col-span-3">
                 <div className="font-display text-5xl text-[color:var(--gold)]">10+</div>
                 <div className="mt-2 text-sm text-white/80">Years of warm hospitality and quietly excellent service.</div>
               </div>
@@ -80,7 +80,7 @@ function HomePage() {
               subtitle="Four thoughtfully designed room types, each with its own character — all built around real comfort and calm."
             />
             <Reveal delay={0.2}>
-              <Link to="/rooms" className="inline-flex items-center gap-2 rounded-full border border-foreground/20 px-5 py-2.5 text-sm font-semibold transition hover:border-[color:var(--gold)] hover:text-[color:var(--gold)]">
+              <Link to="/rooms" className="inline-flex items-center justify-center gap-2 rounded-full border border-foreground/20 px-5 py-2.5 text-sm font-semibold transition hover:border-[color:var(--gold)] hover:text-[color:var(--gold)] sm:justify-start">
                 View all rooms <ArrowUpRight size={14} />
               </Link>
             </Reveal>
@@ -96,18 +96,18 @@ function HomePage() {
       </section>
 
       {/* Amenities strip */}
-      <section className="bg-background py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10">
+      <section className="bg-background py-16 sm:py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <SectionHeading
             align="center"
             eyebrow="Amenities"
             title="Every detail, quietly taken care of"
             subtitle="From high-speed Wi-Fi and 24/7 reception to peaceful surroundings and warm meals — the essentials, done exceptionally well."
           />
-          <Stagger className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          <Stagger className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-6">
             {AMENITIES.slice(0, 6).map((a) => (
               <StaggerItem key={a.title}>
-                <div className="group flex flex-col items-center rounded-3xl bg-secondary/50 p-6 text-center transition hover:-translate-y-1 hover:bg-secondary hover:shadow-soft">
+                <div className="group flex flex-col items-center rounded-3xl bg-secondary/50 p-4 text-center transition hover:-translate-y-1 hover:bg-secondary hover:shadow-soft sm:p-6">
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-gold text-[color:var(--charcoal)]">
                     <AmenityIcon name={a.icon as never} className="h-6 w-6" />
                   </div>
@@ -125,10 +125,10 @@ function HomePage() {
       </section>
 
       {/* Why choose */}
-      <section className="relative overflow-hidden bg-[color:var(--charcoal)] py-24 text-white sm:py-32">
+      <section className="relative overflow-hidden bg-[color:var(--charcoal)] py-16 text-white sm:py-24 lg:py-32">
         <img src={outdoorImg} alt="" loading="lazy" width={1280} height={896} className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-r from-[color:var(--charcoal)] via-[color:var(--charcoal)]/85 to-[color:var(--charcoal)]/60" />
-        <div className="relative mx-auto max-w-7xl px-6 sm:px-10">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <SectionHeading
             invert
             eyebrow="Why Hollyken"
@@ -163,7 +163,7 @@ function HomePage() {
           <Stagger className="mt-14 grid gap-6 md:grid-cols-3">
             {REVIEWS.slice(0, 3).map((r) => (
               <StaggerItem key={r.name}>
-                <figure className="flex h-full flex-col rounded-3xl bg-card p-8 shadow-soft">
+                <figure className="flex h-full flex-col rounded-3xl bg-card p-6 shadow-soft sm:p-8">
                   <Quote className="h-6 w-6 text-[color:var(--gold)]" aria-hidden="true" />
                   <blockquote className="mt-4 flex-1 font-display text-lg leading-snug text-foreground">
                     "{r.quote}"
@@ -192,8 +192,8 @@ function HomePage() {
       </section>
 
       {/* Location preview */}
-      <section className="bg-background py-24 sm:py-32">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 sm:px-10 lg:grid-cols-2">
+      <section className="bg-background py-16 sm:py-24 lg:py-32">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-10">
           <SectionHeading
             eyebrow="Location"
             title="Easy to find, easy to love"

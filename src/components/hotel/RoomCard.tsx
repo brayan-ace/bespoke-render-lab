@@ -4,7 +4,7 @@ import { WHATSAPP_URL } from "./data";
 
 export function RoomCard({ room }: { room: Room }) {
   return (
-    <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl bg-card shadow-luxe ring-1 ring-black/5 transition-transform duration-500 hover:-translate-y-1">
+    <article className="group relative flex h-full min-w-0 flex-col overflow-hidden rounded-3xl bg-card shadow-luxe ring-1 ring-black/5 transition-transform duration-500 hover:-translate-y-1">
       <div className="relative aspect-[4/3] overflow-hidden">
         <img
           src={room.image}
@@ -19,7 +19,7 @@ export function RoomCard({ room }: { room: Room }) {
           Signature
         </div>
       </div>
-      <div className="flex flex-1 flex-col gap-4 p-7">
+      <div className="flex flex-1 flex-col gap-4 p-6 sm:p-7">
         <div>
           <h3 className="font-display text-2xl leading-tight text-foreground">{room.name}</h3>
           <p className="mt-1 text-sm text-[color:var(--gold)]">{room.tagline}</p>
@@ -39,7 +39,7 @@ export function RoomCard({ room }: { room: Room }) {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-auto inline-flex items-center gap-2 self-start rounded-full border border-foreground/15 px-5 py-2.5 text-sm font-semibold text-foreground transition hover:border-[color:var(--gold)] hover:text-[color:var(--gold)]"
+          className="mt-auto inline-flex items-center justify-center gap-2 self-start rounded-full border border-foreground/15 px-5 py-2.5 text-sm font-semibold text-foreground transition hover:border-[color:var(--gold)] hover:text-[color:var(--gold)]"
         >
           Book this room <ArrowUpRight size={14} />
         </a>

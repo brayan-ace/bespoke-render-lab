@@ -144,6 +144,12 @@
 @layer base {
   * {
     border-color: var(--color-border);
+    min-width: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
@@ -151,6 +157,14 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  img, video, iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
 
   h1, h2, h3, h4, h5, h6, .font-display {
@@ -158,7 +172,9 @@
     letter-spacing: -0.01em;
   }
 
-  html { scroll-behavior: smooth; }
+  button, input, textarea, select {
+    font: inherit;
+  }
 
   ::selection { background: var(--gold); color: var(--charcoal); }
 }

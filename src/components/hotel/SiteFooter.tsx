@@ -7,7 +7,7 @@ export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-[color:var(--charcoal)] text-white/80">
       <div className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-[color:var(--gold)] to-transparent" />
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 sm:px-10 lg:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-10">
         <div>
           <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="" width={40} height={40} className="h-10 w-10 object-contain" />
@@ -73,17 +73,17 @@ export function SiteFooter() {
             Occasional letters — new experiences, seasonal menus and quiet offers.
           </p>
           <form
-            className="mt-4 flex overflow-hidden rounded-full border border-white/15 bg-white/5"
+            className="mt-4 flex flex-col gap-2 overflow-hidden rounded-[1.5rem] border border-white/15 bg-white/5 p-2 sm:flex-row"
             onSubmit={(e) => e.preventDefault()}
           >
             <input
               type="email"
               required
               placeholder="Your email"
-              className="flex-1 bg-transparent px-4 py-3 text-sm outline-none placeholder:text-white/40"
+              className="flex-1 rounded-full bg-transparent px-4 py-3 text-sm outline-none placeholder:text-white/40"
               aria-label="Email address"
             />
-            <button type="submit" className="bg-[color:var(--gold)] px-5 text-sm font-semibold text-[color:var(--charcoal)]">
+            <button type="submit" className="rounded-full bg-[color:var(--gold)] px-5 py-3 text-sm font-semibold text-[color:var(--charcoal)]">
               Join
             </button>
           </form>
@@ -91,7 +91,7 @@ export function SiteFooter() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-white/50 sm:flex-row sm:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-white/50 sm:flex-row sm:px-6 lg:px-10">
           <p>© {new Date().getFullYear()} Hollyken Hotel. Crafted with care.</p>
           <button
             type="button"

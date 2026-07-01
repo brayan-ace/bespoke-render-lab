@@ -30,7 +30,7 @@ export function SiteHeader() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 sm:px-8 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
         <Link
           to="/"
           className="flex items-center gap-3"
@@ -84,7 +84,7 @@ export function SiteHeader() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className={`lg:hidden flex h-11 w-11 items-center justify-center rounded-full border ${
+          className={`lg:hidden flex h-11 w-11 shrink-0 items-center justify-center rounded-full border ${
             scrolled || open ? "border-border text-foreground" : "border-white/40 text-white"
           }`}
         >
@@ -95,10 +95,10 @@ export function SiteHeader() {
       {/* Mobile menu */}
       <div
         className={`lg:hidden overflow-hidden transition-[max-height,opacity] duration-500 ${
-          open ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0"
+          open ? "max-h-[calc(100dvh-4.5rem)] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="border-t border-border/60 bg-background px-6 py-6">
+        <div className="border-t border-border/60 bg-background px-4 py-6 sm:px-6">
           <ul className="flex flex-col gap-1">
             {NAV_LINKS.map((l) => (
               <li key={l.to}>
@@ -118,7 +118,7 @@ export function SiteHeader() {
             <a href={`tel:${PHONE_TEL}`} className="flex items-center justify-center gap-2 rounded-full border border-border py-3 text-sm">
               <Phone size={14} /> Call {PHONE_TEL}
             </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-gold">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-gold w-full justify-center">
               Book on WhatsApp
             </a>
           </div>

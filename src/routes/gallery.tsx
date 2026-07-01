@@ -53,9 +53,9 @@ function GalleryPage() {
           <SectionHeading invert eyebrow="Gallery" title="A walk around Hollyken" subtitle="Rooms, restaurant, reception and quiet corners — a look at the details that make the difference." />
         </div>
       </section>
-      <section className="bg-background py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10">
-          <Stagger className="grid auto-rows-[200px] grid-cols-2 gap-4 sm:grid-cols-4">
+      <section className="bg-background py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+          <Stagger className="grid auto-rows-[180px] grid-cols-1 gap-4 sm:auto-rows-[200px] sm:grid-cols-2 lg:grid-cols-4">
             {IMAGES.map((img, i) => (
               <StaggerItem key={i} className={`overflow-hidden rounded-2xl shadow-soft ${img.span ?? ""}`}>
                 <img src={img.src} alt={img.alt} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] hover:scale-105" />

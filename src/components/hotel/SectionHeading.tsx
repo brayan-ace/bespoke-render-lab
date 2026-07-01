@@ -26,7 +26,7 @@ export function SectionHeading({
         </p>
       )}
       <h2
-        className={`mt-3 font-display text-4xl leading-[1.05] sm:text-5xl md:text-6xl ${
+        className={`mt-3 font-display text-[clamp(2rem,4.3vw,3rem)] leading-[1.05] sm:text-[clamp(2.35rem,5vw,3.5rem)] lg:text-[clamp(2.8rem,5.5vw,4rem)] ${
           invert ? "text-white" : "text-foreground"
         }`}
       >

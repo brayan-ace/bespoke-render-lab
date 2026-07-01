@@ -44,13 +44,13 @@ function ReviewsPage() {
         </div>
       </section>
 
-      <section className="bg-background py-24">
-        <div className="mx-auto max-w-5xl px-6 sm:px-10">
+      <section className="bg-background py-16 sm:py-24">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-10">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {REVIEWS.map((r) => (
-                <div key={r.name} className="min-w-0 flex-[0_0_100%] px-2">
-                  <figure className="mx-auto max-w-2xl rounded-3xl bg-card p-10 text-center shadow-luxe">
+                <div key={r.name} className="min-w-0 flex-[0_0_100%] px-0 sm:px-2">
+                  <figure className="mx-auto max-w-2xl rounded-3xl bg-card p-6 text-center shadow-luxe sm:p-8 lg:p-10">
                     <Quote className="mx-auto h-8 w-8 text-[color:var(--gold)]" aria-hidden="true" />
                     <blockquote className="mt-6 font-display text-2xl leading-snug text-foreground sm:text-3xl">
                       "{r.quote}"
@@ -91,8 +91,8 @@ function ReviewsPage() {
         </div>
       </section>
 
-      <section className="bg-secondary/60 py-24">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10">
+      <section className="bg-secondary/60 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
           <SectionHeading eyebrow="All reviews" title="Highlights from recent stays" />
           <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {REVIEWS.map((r) => (
