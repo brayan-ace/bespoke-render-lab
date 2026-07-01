@@ -74,7 +74,7 @@ export function SiteHeader() {
           >
             <Phone size={14} /> {PHONE_TEL}
           </a>
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-gold hover:[&]:btn-gold-hover text-sm">
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-gold text-sm">
             Book Now
           </a>
         </div>

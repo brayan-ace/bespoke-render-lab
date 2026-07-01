@@ -204,9 +204,10 @@
   border-radius: 9999px;
   box-shadow: var(--shadow-gold);
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-}
-@utility btn-gold-hover {
-  transform: translateY(-2px);
-  filter: brightness(1.05);
-  box-shadow: 0 24px 50px -20px oklch(0.78 0.14 85 / 0.7);
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow: 0 24px 50px -20px oklch(0.78 0.14 85 / 0.7);
+  }
 }
